@@ -1,5 +1,5 @@
 import unittest
-from scr.anchor_point import AnchorPoint
+from src.anchor_point import AnchorPoint
 
 class TestAnchorPoint(unittest.TestCase):
 	def test_coords_return(self):
