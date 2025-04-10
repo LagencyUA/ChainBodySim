@@ -5,6 +5,12 @@ on:
     types: [opened, edited, reopened, synchronize, review_requested, submitted]
     branches:
     - develop
+    - main
+
+permissions:
+  pull-requests: write
+  contents: read
+
 jobs:
   build:
     runs-on: ubuntu-latest
@@ -49,7 +55,7 @@ jobs:
       
       - name: Count lines of code with Cloc
         run: |
-          sudo atp-get install -y cloc
+          sudo apt-get install -y cloc
           cloc src/ > cloc-report.txt
           cat cloc-report.txt
       
