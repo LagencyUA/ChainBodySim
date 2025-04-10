@@ -1,4 +1,4 @@
-from drawer import Drawer
+from src.drawer import Drawer
 
 def main():
     drawer = Drawer()

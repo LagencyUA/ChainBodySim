@@ -1,5 +1,5 @@
 import pygame as pg
-from anchor_point import AnchorPoint
+from src.anchor_point import AnchorPoint
 
 class Drawer:
     def __init__(self):
