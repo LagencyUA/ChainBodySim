@@ -5,6 +5,7 @@ on:
     types: [opened, edited, reopened, synchronize, review_requested, submitted]
     branches:
     - develop
+    - main
 jobs:
   build:
     runs-on: ubuntu-latest
