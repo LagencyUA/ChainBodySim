@@ -46,3 +46,14 @@ jobs:
             if (!approved) {
               core.setFailed("Code Review is not approved");
             }
+      
+      - name: Count lines of code with Cloc
+        run: |
+          sudo atp-get install -y cloc
+          cloc src/ > cloc-report.txt
+          cat cloc-report.txt
+      
+      - name: Run SonarQube Cloud scanning
+        uses: SonarSource/sonarqube-scan-action@v5
+        env:
+          SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
