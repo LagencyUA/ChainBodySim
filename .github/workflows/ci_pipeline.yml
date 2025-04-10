@@ -50,7 +50,7 @@ jobs:
       
       - name: Count lines of code with Cloc
         run: |
-          sudo atp-get install -y cloc
+          sudo apt-get install -y cloc
           cloc src/ > cloc-report.txt
           cat cloc-report.txt
       
